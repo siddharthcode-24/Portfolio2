@@ -10,6 +10,11 @@
     --transition-speed: 0.3s ease-in-out;
 }
 
+/* Global Box Sizing for better responsiveness */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 /* Disable text selection */
 body {
     user-select: none;
@@ -101,7 +106,7 @@ header {
     box-shadow: 0 0 10px rgba(0, 188, 212, 0.6), 0 0 20px rgba(0, 188, 212, 0.4);
 }
 
-/* Responsive */
+/* Responsive Header */
 @media (max-width: 768px) {
     header {
         padding: 12px 15px;
@@ -117,10 +122,32 @@ header {
     }
 }
 
+@media (max-width: 600px) {
+    header {
+        flex-direction: column; /* Stack logo and controls vertically */
+        padding: 10px; /* Smaller padding */
+        gap: 10px; /* Space between logo and controls */
+    }
+    .logo {
+        margin-bottom: 5px; /* Add some space below the logo */
+    }
+    .header-controls {
+        margin-right: 0; /* Remove fixed margin to allow centering */
+        justify-content: center; /* Center buttons */
+        width: 100%; /* Make controls take full width */
+    }
+}
+
+/* Sections */
 /* Sections */
 section {
-    padding: 20px 15%;
+    padding: 60px 15%; /* Default for larger screens */
     min-height: 72vh;
+    /* --- FIX STARTS HERE --- */
+    opacity: 0; /* Start hidden */
+    transform: translateY(50px) scale(0.95); /* Start slightly off-screen and scaled down */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* Smooth transition for both properties */
+    /* --- FIX ENDS HERE --- */
 }
 
 /* Animation: Smooth Pop-up Effect */
@@ -135,11 +162,10 @@ section {
     }
 }
 
-/* Initially Hide Sections */
-section {
-    opacity: 0;
-    transform: translateY(50px) scale(0.95);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+/* Active Class: Section Pops Up */
+.section-visible {
+    opacity: 1 !important; /* Force full visibility */
+    transform: translateY(0) scale(1) !important; /* Force original position and scale */
 }
 
 /* Active Class: Section Pops Up */
@@ -155,8 +181,8 @@ section {
     align-items: center;
     justify-content: space-between;
     text-align: left;
-    padding: 60px 15%;
-    min-height: 100vh;
+    padding: 60px 15%; /* Default for larger screens */
+    min-height: 100vh; /* Default for larger screens */
 }
 
 /* Hero Text */
@@ -245,7 +271,7 @@ p {
 /* Project Card Styling */
 .project-card {
     width: 100%;
-    height: 320px;
+    min-height: 320px;
     perspective: 1200px;
     cursor: pointer;
     transition: transform 0.3s;
@@ -324,19 +350,22 @@ p {
     color: var(--accent-color);
 }
 
-/* Mobile View Optimization */
+/* Mobile View Optimization for Projects */
 @media screen and (max-width: 768px) {
     #projects {
         padding: 20px 10px;
+        min-height: auto; /* Allow height to be determined by content */
     }
 
     .projects {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
         gap: 15px;
     }
 
     .project-card {
-        height: 280px;
+        min-height: 280px; /* Adjusted min-height for mobile */
+        max-width: 95%; /* Prevent card from overflowing on tiny screens if gap makes it too wide */
+        margin: 0 auto; /* Center individual cards if not full width */
     }
 
     .project-front h3 {
@@ -355,6 +384,12 @@ p {
         width: 80px;
         height: 80px;
         font-size: 25px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .projects {
+        grid-template-columns: 1fr; /* Force single column on very small phones */
     }
 }
 
@@ -468,16 +503,15 @@ p {
     }
 }
 
-/* Mobile Responsiveness */
+/* Mobile Responsiveness for Contact */
 @media (max-width: 600px) {
     #contact {
-        padding: 40px 40px;
-        margin-right: 9px;
-        margin-left: 9px;
-        margin-top: 10px;
+        padding: 40px 20px; /* Adjusted padding for better mobile fit */
+        margin: 10px auto; /* Centered with auto margins */
+        max-width: 95%; /* Ensure it doesn't overflow */
     }
     .input-group input, .input-group textarea {
-        width: 92%;
+        width: 100%; /* Adjusted width to be consistent */
     }
 
     .contact {
@@ -490,21 +524,58 @@ p {
 }
 
 
-/* Responsive */
+/* Responsive for Hero Section */
 @media (max-width: 1024px) {
     .hero {
         flex-direction: column;
         text-align: center;
+        padding: 60px 5%; /* Reduced padding for smaller screens */
+        min-height: auto; /* Allow height to be determined by content */
     }
 
     .hero-text {
         max-width: 100%;
+        margin-bottom: 20px; /* Add space between text and image */
+    }
+
+    .hero-text h1 {
+        font-size: 36px; /* Adjusted font size for mobile */
+    }
+
+    .hero-text p {
+        font-size: 16px; /* Adjusted font size for mobile */
     }
 
     .profile-image {
         width: 250px;
         height: 250px;
         margin-top: 20px;
+        max-width: 90%; /* Ensure image scales down on very small screens */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    section {
+        padding: 40px 5%; /* Reduced padding for all sections on smaller screens */
+        min-height: auto; /* Allow height to be determined by content */
+    }
+}
+
+@media (max-width: 600px) {
+    .hero-text h1 {
+        font-size: 30px; /* Even smaller on tiny phones */
+    }
+    .hero-text p {
+        font-size: 15px;
+    }
+    .resume-download {
+        text-align: center; /* Ensures the button is centered */
+        width: 100%; /* Helps if it's in a flex container that isn't stretching it */
+    }
+}
+
+@media (max-width: 480px) { /* Targeting smaller mobile phones */
+    section {
+        padding: 30px 15px; /* Fixed pixel padding for consistent spacing */
     }
 }
 
@@ -592,19 +663,30 @@ p {
     transform: scale(1.1);
 }
 
-/* Responsive Design */
+/* Responsive Design for About */
 @media (max-width: 768px) {
+    #about {
+        padding: 20px 15px; /* Adjusted padding for mobile */
+    }
     .about-content {
         font-size: 1rem;
     }
 
     .badges-container {
         flex-direction: column;
+        align-items: center; /* Center badges when stacked */
     }
 
     .badge {
-        width: 80%;
+        width: 90%; /* Increased width for better touch targets */
+        max-width: 250px; /* Max width to prevent overly wide badges */
         text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-content {
+        font-size: 0.95rem; /* Slightly smaller text for tiny screens */
     }
 }
 
@@ -657,10 +739,7 @@ p {
     z-index: 10001; /* Also above everything */
 }
 
-/* Ensure Terminal is Below Cursor */
-#terminal-container {
-    z-index: 1000 !important; /* Keeps it under the cursor */
-}
+
 
 /* Keyframe Animation for Trail Disappearance */
 @keyframes fadeOut {
@@ -810,6 +889,30 @@ button:hover {
     opacity: 1;
 }
 
+/* Responsive for Expertise Section */
+@media (max-width: 768px) {
+    .skill-card {
+        width: 150px; /* Slightly smaller base width for tablets */
+        height: 90px; /* Adjusted height */
+        font-size: 16px;
+    }
+    .skill-card::before {
+        font-size: 18px; /* Adjust font size for skill name */
+    }
+}
+
+@media (max-width: 480px) { /* For smaller phones */
+    .skill-card {
+        width: 90%; /* Make cards take almost full width on small screens */
+        max-width: 200px; /* Prevent them from becoming too wide in vertical alignment */
+        height: 80px;
+        font-size: 14px;
+    }
+    .skill-card::before {
+        font-size: 16px;
+    }
+}
+
 
 /* Blog Section */
 #blogs {
@@ -923,6 +1026,23 @@ button:hover {
     display: block;
 }
 
+/* Responsive for Beyond Code Section */
+@media (max-width: 768px) {
+    .beyond-card {
+        width: 200px; /* Slightly smaller width */
+        padding: 12px;
+        font-size: 0.95em;
+    }
+}
+
+@media (max-width: 480px) {
+    .beyond-card {
+        width: 90%; /* Full width for smaller phones */
+        max-width: 280px; /* Keep it from getting too wide */
+        margin: 0 auto; /* Center the card */
+    }
+}
+
 /* Certifications Section */
 #certifications {
     text-align: center;
@@ -1005,6 +1125,32 @@ button:hover {
     max-height: 50px;
 }
 
+/* Responsive for Certifications Section */
+@media (max-width: 768px) {
+    .cert-item {
+        min-height: 100px; /* Slightly reduced height */
+        padding: 15px;
+        font-size: 0.95em;
+    }
+    .cert-item h3 {
+        font-size: 0.9rem; /* Adjust heading size */
+    }
+    .cert-desc {
+        font-size: 0.85rem; /* Adjust description size */
+    }
+}
+
+@media (max-width: 480px) { /* For smaller phones, perhaps one column */
+    .cert-container {
+        grid-template-columns: 1fr; /* Force single column for easy tapping */
+    }
+    .cert-item {
+        max-width: 90%; /* Ensure it's not too wide */
+        margin: 0 auto; /* Center the item */
+    }
+}
+
+
 /* Adjusting colors dynamically based on theme */
 :root {
     --text-color: #e0e6eb;
@@ -1018,172 +1164,12 @@ button:hover {
     --text-color: #e0e6eb;
 }
 
-/* Terminal Container */
-#terminal-container {
-    position: fixed;
-    bottom: 10%;
-    right: 5%;
-    cursor: none;
-    padding: 2px;
-    width: 550px;
-    height: 320px;
-    background: #1e1e1e; /* Classic terminal background */
-    color: #00ff00; /* Green terminal text */
-    font-family: "Fira Code", monospace; /* Techy monospace font */
-    border-radius: 6px;
-    resize: both;
-    overflow: hidden;
-    z-index: 9999; /* Always on top */
-    display: none;
-    box-shadow: 0 0 15px rgba(0, 255, 0, 0.4);
-}
 
-/* Ensure Terminal Stays Above Other Content */
-#terminal-container:focus,
-#terminal-container:hover {
-    z-index: 99999; /* Bring it to top when clicked */
-}
-
-/* Terminal Header (Windows Style) */
-#terminal-header {
-    background: #2d2d2d;
-    padding: 4px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    cursor: none;
-    color: #cccccc;
-    font-family: 'Inter', sans-serif;
-    font-size: 14px;
-}
-
-/* Terminal Buttons */
-.terminal-btn {
-    padding: 5px;
-    margin: 2px;
-    font-size: 14px;
-    color: #cccccc;
-    transition: color 0.2s ease-in-out;
-}
 
 .close:hover { color: #ff5c5c; } /* Red for close */
 .minimize:hover { color: #ffff00; } /* Yellow for minimize */
 
-/* Terminal Body */
-#terminal-body {
-    height: calc(100% - 40px);
-    padding: 10px;
-    overflow-y: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-}
 
-/* Input Line */
-#terminal-input-line {
-    display: flex;
-    align-items: center;
-}
-
-.terminal-prefix {
-    color: #00ff00; /* Green prefix */
-    margin-right: 5px;
-}
-
-#terminal-input {
-    background: transparent;
-    border: none;
-    outline: none;
-    color: #00ff00;
-    font-size: 16px;
-    width: 100%;
-}
-
-/* Ensure Button Stays on Top */
-#toggle-terminal {
-    position: fixed;
-    bottom: 10px;
-    right: 10px;
-    background: var(--accent-color);
-    color: var(--primary-color);
-    border: none;
-    padding: 8px 12px;
-    cursor: pointer;
-    font-size: 16px;
-    border-radius: 5px;
-    z-index: 9999; /* Always above other elements */
-}
-
-#toggle-terminal:hover {
-    background: #00e5ff;
-}
-
-/* Responsive Terminal Styling */
-@media (max-width: 768px) {
-    #terminal-container {
-        width: 90vw; /* Full width on mobile */
-        height: 50vh; /* Adjusted height */
-        bottom: 5%;
-        right: 5%;
-        border-radius: 8px;
-    }
-
-    #terminal-header {
-        padding: 10px;
-        font-size: 14px;
-    }
-
-    .terminal-btn {
-        font-size: 12px;
-        padding: 4px;
-    }
-
-    #terminal-body {
-        font-size: 14px;
-        padding: 8px;
-    }
-
-    #terminal-input {
-        font-size: 14px;
-    }
-
-    #toggle-terminal {
-        bottom: 15px;
-        right: 15px;
-        font-size: 14px;
-        padding: 6px 10px;
-    }
-}
-
-/* Ensure Terminal is Always Usable on Small Screens */
-@media (max-width: 480px) {
-    #terminal-container {
-        width: 95vw;
-        height: 60vh;
-        bottom: 3%;
-        right: 2%;
-    }
-
-    #terminal-header {
-        font-size: 12px;
-        padding: 8px;
-    }
-
-    #terminal-body {
-        font-size: 12px;
-    }
-
-    #terminal-input {
-        font-size: 12px;
-    }
-
-    #toggle-terminal {
-        bottom: 10px;
-        right: 10px;
-        font-size: 12px;
-        padding: 5px 8px;
-    }
-}
 
 /* Slideshow Container */
 .slideshow-container {
@@ -1267,14 +1253,16 @@ button:hover {
     background-color: rgba(0, 188, 212, 0.8);
 }
 
-/* Responsive Design */
+/* Responsive Design for Slideshow */
 @media screen and (max-width: 768px) {
     .slideshow-container {
         max-width: 95%;
     }
 
     .slide img {
-        height: 250px; /* Smaller height for mobile screens */
+        height: 200px; /* Further reduced height for smaller mobile screens */
+        /* Consider using aspect-ratio if you want to maintain a specific ratio */
+        /* aspect-ratio: 16 / 9; */
     }
 
     .caption {
@@ -1315,7 +1303,7 @@ button:hover {
 
 @media (max-width: 768px) {
     #show-more-btn {
-        width: 100%;
+        width: 90%; /* Adjusted width for better mobile fit */
         font-size: 14px;
     }
 }
