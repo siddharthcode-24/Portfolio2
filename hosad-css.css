@@ -191,7 +191,7 @@ section {
 }
 
 .hero-text h1 {
-    font-size: 60px;
+    font-size: 42px;
     font-family: 'Fira Code', monospace; /* Techy monospace font */
     color: var(--accent-color);
 }
@@ -562,7 +562,7 @@ p {
 
 @media (max-width: 600px) {
     .hero-text h1 {
-        font-size: 30px; /* Even smaller on tiny phones */
+        font-size: 42px; /* Even smaller on tiny phones */
     }
     .hero-text p {
         font-size: 15px;
