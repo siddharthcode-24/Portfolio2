@@ -1399,6 +1399,7 @@ button:hover {
         font-size: 20px;
     }
 }
+
 /* Footer Section */
 footer {
     background: var(--primary-color); /* Matches the header and main background */
