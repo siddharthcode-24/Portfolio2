@@ -139,15 +139,12 @@ header {
 }
 
 /* Sections */
-/* Sections */
 section {
     padding: 60px 15%; /* Default for larger screens */
     min-height: 72vh;
-    /* --- FIX STARTS HERE --- */
     opacity: 0; /* Start hidden */
     transform: translateY(50px) scale(0.95); /* Start slightly off-screen and scaled down */
     transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* Smooth transition for both properties */
-    /* --- FIX ENDS HERE --- */
 }
 
 /* Animation: Smooth Pop-up Effect */
@@ -167,13 +164,6 @@ section {
     opacity: 1 !important; /* Force full visibility */
     transform: translateY(0) scale(1) !important; /* Force original position and scale */
 }
-
-/* Active Class: Section Pops Up */
-.section-visible {
-    opacity: 1 !important;
-    transform: translateY(0) scale(1) !important;
-}
-
 
 /* Hero Section */
 .hero {
@@ -424,9 +414,10 @@ p {
     margin-bottom: 20px;
 }
 
+/* --- THIS IS THE CORRECTED PART --- */
 .input-group input,
 .input-group textarea {
-    width: 100%;
+    width: 100%; /* CHANGED FROM 95% TO 100% TO FIX ALIGNMENT */
     padding: 10px;
     padding-top: 17px;
     border: 2px solid rgba(0, 188, 212, 0.7); /* Accent border */
@@ -523,7 +514,6 @@ p {
     }
 }
 
-
 /* Responsive for Hero Section */
 @media (max-width: 1024px) {
     .hero {
@@ -578,7 +568,6 @@ p {
         padding: 30px 15px; /* Fixed pixel padding for consistent spacing */
     }
 }
-
 
 .resume-download {
     text-align: left;
@@ -690,7 +679,6 @@ p {
     }
 }
 
-
 .resume-download a button {
     font-family: 'Lexend Deca', sans-serif;
 }
@@ -711,7 +699,6 @@ p {
     background-color: #00e5ff;
     transform: scale(1.05);
 }
-
 
 /* Custom Cursor - Ensuring Visibility */
 #custom-cursor {
@@ -739,8 +726,6 @@ p {
     z-index: 10001; /* Also above everything */
 }
 
-
-
 /* Keyframe Animation for Trail Disappearance */
 @keyframes fadeOut {
     from {
@@ -751,7 +736,6 @@ p {
         transform: scale(1.5);
     }
 }
-
 
 button {
     background: linear-gradient(45deg, #00bcd4, #00a4b8); /* Accent gradient */
@@ -912,7 +896,6 @@ button:hover {
         font-size: 16px;
     }
 }
-
 
 /* Blog Section */
 #blogs {
@@ -1150,7 +1133,6 @@ button:hover {
     }
 }
 
-
 /* Adjusting colors dynamically based on theme */
 :root {
     --text-color: #e0e6eb;
@@ -1164,12 +1146,8 @@ button:hover {
     --text-color: #e0e6eb;
 }
 
-
-
 .close:hover { color: #ff5c5c; } /* Red for close */
 .minimize:hover { color: #ffff00; } /* Yellow for minimize */
-
-
 
 /* Slideshow Container */
 .slideshow-container {
@@ -1399,7 +1377,6 @@ button:hover {
         font-size: 20px;
     }
 }
-
 /* Footer Section */
 footer {
     background: var(--primary-color); /* Matches the header and main background */
