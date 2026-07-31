@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Siddharth Bajaj — Full-Stack Developer &amp; AI/ML Enthusiast</title>
+<meta name="description" content="Portfolio of Siddharth Bajaj — Full-Stack (MERN) developer and AI/ML enthusiast. Hackathon winner, SIH finalist. Projects, internships and certifications.">
+<link rel="icon" type="image/jpeg" href="assets/profile.jpg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Preloader -->
+<div id="preloader">
+  <div class="loader-prompt mono">siddharth@portfolio:~$ booting…</div>
+  <div class="loader-bar"></div>
+</div>
+
+<!-- Ambient background -->
+<div class="bg-mesh"></div>
+<div class="blob blob-1"></div>
+<div class="blob blob-2"></div>
+<div class="blob blob-3"></div>
+
+<!-- Custom cursor -->
+<div id="cursor-dot"></div>
+<div id="cursor-ring"></div>
+
+<!-- Scroll progress -->
+<div id="scroll-progress"></div>
+
+<!-- Header -->
+<header id="site-header">
+  <div class="logo">&lt;Siddharth Bajaj/&gt;</div>
+  <nav class="main-nav" id="main-nav">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#certifications">Certifications</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <div class="header-controls">
+    <button class="icon-btn" id="theme-toggle" aria-label="Toggle theme">☀️</button>
+    <div class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></div>
+  </div>
+</header>
+
+<main>
+
+  <!-- Hero -->
+  <section class="hero" id="home">
+    <div class="hero-text">
+      <span class="hero-greet" data-reveal><span class="wave">👋</span> Hi, I'm</span>
+      <h1 data-reveal data-delay="80">Siddharth <span class="accent-name">Bajaj</span></h1>
+      <div class="hero-role mono" data-reveal data-delay="140"><span id="typed-role"></span></div>
+      <p class="hero-desc" data-reveal data-delay="200">
+       A 2026 Computer Science Engineering graduate (88%) specializing in full-stack Python development and AI/ML-powered applications. National hackathon winner, 2× Smart India Hackathon finalist, and software developer with experience building production-ready solutions.
+      </p>
+      <div class="hero-cta" data-reveal data-delay="260">
+        <a href="assets/Siddharth_Bajaj_Resume.pdf" download="Siddharth_Bajaj_Resume.pdf" class="btn btn-primary">
+          <i class="fa-solid fa-download"></i> Download Resume
+        </a>
+        <a href="#projects" class="btn btn-outline"><i class="fa-solid fa-diagram-project"></i> View Projects</a>
+        <a href="#contact" class="btn btn-outline"><i class="fa-solid fa-paper-plane"></i> Contact Me</a>
+      </div>
+      <div class="hero-socials" data-reveal data-delay="320">
+        <a href="https://github.com/siddharthcode-24" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/siddharth-bajaj-059957257/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="https://mail.google.com/mail/?view=cm&to=siddharthbajaj24@gmail.com" target="_blank" rel="noopener" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+        <a href="tel:+919026475852" aria-label="Phone"><i class="fa-solid fa-phone"></i></a>
+      </div>
+    </div>
+
+    <div class="hero-visual" data-reveal="scale" data-delay="120">
+      <div class="hero-photo-wrap">
+        <div class="hero-photo-ring"></div>
+        <img src="assets/image_gemini.png" alt="Siddharth Bajaj" class="hero-photo">
+        <div class="hero-floating-badge badge-top"><i class="fa-solid fa-trophy" style="color:var(--accent)"></i> Hackathon Winner</div>
+        <div class="hero-floating-badge badge-bottom"><i class="fa-brands fa-react" style="color:var(--primary)"></i> Full Stack &amp; AI</div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- About -->
+  <section id="about">
+    <div class="section-inner">
+      <span class="eyebrow" data-reveal>About Me</span>
+      <h2 class="section-title" data-reveal>The person behind the <span class="gradient-text">code</span></h2>
+      <p class="section-sub" data-reveal>A quick look at who I am, what drives me, and where I've grown.</p>
+
+      <div class="about-grid">
+        <div class="about-text" data-reveal="left">
+          <p><strong>Hello! I'm Siddharth Bajaj</strong> a final-year <strong>B.Tech Computer Science
+            Engineering</strong> student at Shri Ramswaroop Memorial College of Engineering and Management,
+            graduating with an 88% aggregate (8.8 CGPA).</p>
+          <p>I build <strong>full-stack MERN applications and AI/ML-powered tools</strong> — from a bookstore
+            platform with JWT-secured admin dashboards to a RAG-based medical report summarizer. I've interned
+            as a <strong>Front-End Developer at TechieHelp</strong> and as an <strong>AI/ML Intern</strong>
+            through the Shell-Edunet Skills4Future (AICTE) program.</p>
+          <p>My toolkit spans <strong>React, Node.js, Express, MongoDB, Supabase and Python</strong>, alongside
+            AI tooling like <strong>LangChain, HuggingFace and scikit-learn</strong>.</p>
+          <p>Outside of coursework, I compete — I won <strong>Hackloop 2025</strong> against 100+ teams and was
+            shortlisted as a <strong>Smart India Hackathon finalist two years running</strong>.</p>
+
+          <div class="badges-row">
+            <span class="pill-badge">🚀 Full-Stack (MERN) Developer</span>
+            <span class="pill-badge">🤖 AI &amp; ML Enthusiast</span>
+            <span class="pill-badge">🏆 Hackathon Winner</span>
+            <span class="pill-badge">🇮🇳 SIH Finalist ×2</span>
+          </div>
+
+          <div class="xp-block">
+            <div class="xp-label"><span>Level 2 — Software Developer</span><span>XP 72%</span></div>
+            <div class="xp-track" data-fill="72"><div class="xp-fill"></div></div>
+          </div>
+        </div>
+
+        <div data-reveal="right">
+          <div class="about-stats">
+            <div class="stat-card"><div class="stat-num" data-count="4" data-suffix="+">0</div><div class="stat-label">Flagship Projects</div></div>
+            <div class="stat-card"><div class="stat-num" data-count="2" data-suffix="">0</div><div class="stat-label">Internships Completed</div></div>
+            <div class="stat-card"><div class="stat-num" data-count="7" data-suffix="+">0</div><div class="stat-label">Certifications</div></div>
+            <div class="stat-card"><div class="stat-num" data-count="88" data-suffix="%">0</div><div class="stat-label">Academic Aggregate</div></div>
+          </div>
+
+          <div class="mini-timeline" style="margin-top:2rem;">
+            <div class="mini-item">
+              <div class="mini-dot"></div>
+              <div>
+                <h4>B.Tech Computer Science Engineering</h4>
+                <span class="mini-meta mono">Shri Ramswaroop Memorial College of Engg. &amp; Mgmt. · Aug 2022 – May 2026</span>
+                <p>88% aggregate · 8.8 CGPA · Best B.Tech Project Award &amp; Best Dissertation (Gold &amp; Silver Medal).</p>
+              </div>
+            </div>
+            <div class="mini-item">
+              <div class="mini-dot"></div>
+              <div>
+                <h4>Front-End Developer Intern</h4>
+                <span class="mini-meta mono">TechieHelp · Sep – Oct 2025</span>
+                <p>Shipped 10+ reusable React components for a live wedding &amp; events platform.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills">
+    <div class="section-inner">
+      <span class="eyebrow" data-reveal>Skills</span>
+      <h2 class="section-title" data-reveal>Tools I <span class="gradient-text">build</span> with</h2>
+      <p class="section-sub" data-reveal>A blend of languages, frameworks and platforms I use to ship reliable software.</p>
+
+      <div class="skills-tabs" data-reveal>
+        <button class="tab-btn active" data-cat="all">All</button>
+        <button class="tab-btn" data-cat="lang">Languages</button>
+        <button class="tab-btn" data-cat="frontend">Frontend</button>
+        <button class="tab-btn" data-cat="backend">Backend &amp; DB</button>
+        <button class="tab-btn" data-cat="ai">AI/ML</button>
+      </div>
+
+      <div class="skills-grid">
+        <!-- Languages -->
+        <div class="skill-card" data-cat="lang" data-reveal data-fill="80">
+          <div class="skill-top"><div class="skill-icon"><i class="fa-brands fa-java"></i></div>
+            <div><div class="skill-name">Java</div><div class="skill-cat">Language</div></div></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill"></div></div><div class="skill-pct">80%</div>
+        </div>
+        <div class="skill-card" data-cat="lang" data-reveal data-fill="85">
+          <div class="skill-top"><div class="skill-icon"><i class="fa-brands fa-js"></i></div>
+            <div><div class="skill-name">JavaScript (ES6+)</div><div class="skill-cat">Language</div></div></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill"></div></div><div class="skill-pct">85%</div>
+        </div>
+        <div class="skill-card" data-cat="lang" data-reveal data-fill="88">
+          <div class="skill-top"><div class="skill-icon"><i class="fa-brands fa-python"></i></div>
+            <div><div class="skill-name">Python</div><div class="skill-cat">Language</div></div></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill"></div></div><div class="skill-pct">88%</div>
+        </div>
+        <div class="skill-card" data-cat="lang" data-reveal data-fill="78">
+          <div class="skill-top"><div class="skill-icon"><i class="fa-solid fa-database"></i></div>
+            <div><div class="skill-name">SQL</div><div class="skill-cat">Language</div></div></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill"></div></div><div class="skill-pct">78%</div>
+        </div>
+        <!-- Frontend -->
+        <div class="skill-card" data-cat="frontend" data-reveal data-fill="88">
+          <div class="skill-top"><div class="skill-icon"><i class="fa-brands fa-react"></i></div>
+            <div><div class="skill-name">React.js</div><div class="skill-cat">Frontend</div></div></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill"></div></div><div class="skill-pct">88%</div>
+        </div>
+        <div class="skill-card" data-cat="frontend" data-reveal data-fill="90">
+          <div class="skill-top"><div class="skill-icon"><i class="fa-brands fa-html5"></i></div>
+            <div><div class="skill-name">HTML5</div><div class="skill-cat">Frontend</div></div></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill"></div></div><div class="skill-pct">90%</div>
+        </div>
+        <div class="skill-card" data-cat="frontend" data-reveal data-fill="85">
+          <div class="skill-top"><div class="skill-icon"><i class="fa-brands fa-css3-alt"></i></div>
+            <div><div class="skill-name">CSS3</div><div class="skill-cat">Frontend</div></div></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill"></div></div><div class="skill-pct">85%</div>
+        </div>
+        <div class="skill-card" data-cat="frontend" data-reveal data-fill="80">
+          <div class="skill-top"><div class="skill-icon"><i class="fa-solid fa-wind"></i></div>
+            <div><div class="skill-name">Tailwind CSS</div><div class="skill-cat">Frontend</div></div></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill"></div></div><div class="skill-pct">80%</div>
+        </div>
+        <div class="skill-card" data-cat="frontend" data-reveal data-fill="72">
+          <div class="skill-top"><div class="skill-icon"><i class="fa-regular fa-square"></i></div>
+            <div><div class="skill-name">Shadcn UI</div><div class="skill-cat">Frontend</div></div></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill"></div></div><div class="skill-pct">72%</div>
+        </div>
+        <!-- Backend & DB -->
+        <div class="skill-card" data-cat="backend" data-reveal data-fill="82">
+          <div class="skill-top"><div class="skill-icon"><i class="fa-brands fa-node-js"></i></div>
+            <div><div class="skill-name">Node.js</div><div class="skill-cat">Backend</div></div></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill"></div></div><div class="skill-pct">82%</div>
+        </div>
+        <div class="skill-card" data-cat="backend" data-reveal data-fill="80">
+          <div class="skill-top"><div class="skill-icon"><i class="fa-solid fa-server"></i></div>
+            <div><div class="skill-name">Express.js</div><div class="skill-cat">Backend</div></div></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill"></div></div><div class="skill-pct">80%</div>
+        </div>
+        <div class="skill-card" data-cat="backend" data-reveal data-fill="80">
+          <div class="skill-top"><div class="skill-icon"><i class="fa-solid fa-leaf"></i></div>
+            <div><div class="skill-name">MongoDB</div><div class="skill-cat">Database</div></div></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill"></div></div><div class="skill-pct">80%</div>
+        </div>
+        <div class="skill-card" data-cat="backend" data-reveal data-fill="74">
+          <div class="skill-top"><div class="skill-icon"><i class="fa-solid fa-bolt"></i></div>
+            <div><div class="skill-name">Supabase</div><div class="skill-cat">Database</div></div></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill"></div></div><div class="skill-pct">74%</div>
+        </div>
+        <div class="skill-card" data-cat="backend" data-reveal data-fill="76">
+          <div class="skill-top"><div class="skill-icon"><i class="fa-solid fa-database"></i></div>
+            <div><div class="skill-name">MySQL</div><div class="skill-cat">Database</div></div></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill"></div></div><div class="skill-pct">76%</div>
+        </div>
+        <!-- AI/ML -->
+        <div class="skill-card" data-cat="ai" data-reveal data-fill="75">
+          <div class="skill-top"><div class="skill-icon"><i class="fa-solid fa-link"></i></div>
+            <div><div class="skill-name">LangChain</div><div class="skill-cat">AI/ML</div></div></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill"></div></div><div class="skill-pct">75%</div>
+        </div>
+        <div class="skill-card" data-cat="ai" data-reveal data-fill="70">
+          <div class="skill-top"><div class="skill-icon"><i class="fa-solid fa-face-smile"></i></div>
+            <div><div class="skill-name">HuggingFace</div><div class="skill-cat">AI/ML</div></div></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill"></div></div><div class="skill-pct">70%</div>
+        </div>
+        <div class="skill-card" data-cat="ai" data-reveal data-fill="70">
+          <div class="skill-top"><div class="skill-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+            <div><div class="skill-name">FAISS / RAG</div><div class="skill-cat">AI/ML</div></div></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill"></div></div><div class="skill-pct">70%</div>
+        </div>
+        <div class="skill-card" data-cat="ai" data-reveal data-fill="78">
+          <div class="skill-top"><div class="skill-icon"><i class="fa-solid fa-robot"></i></div>
+            <div><div class="skill-name">Scikit-learn</div><div class="skill-cat">AI/ML</div></div></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill"></div></div><div class="skill-pct">78%</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience / Education -->
+   <section id="experience">
+  <div class="section-inner">
+
+    <span class="eyebrow" data-reveal>Journey</span>
+
+    <h2 class="section-title" data-reveal>
+      Experience &amp; <span class="gradient-text">Education</span>
+    </h2>
+
+    <p class="section-sub" data-reveal>
+      Where I've studied, interned and contributed so far.
+    </p>
+
+    <div class="timeline">
+
+      <!-- Front-End Internship -->
+      <div class="timeline-item" data-reveal="left">
+        <div class="timeline-dot"></div>
+
+        <div class="timeline-card">
+          <div class="timeline-meta">Sep 2025 – Oct 2025</div>
+
+          <h3>Front-End Developer Intern</h3>
+
+          <div class="timeline-org">
+            TechieHelp — India's Leading AI Software Development Company (Remote)
+          </div>
+
+          <p>
+            Delivered reusable React components for Eventra, improving UI development
+            speed through component-based architecture, responsive layouts, and
+            performance optimization.
+          </p>
+
+          <div class="tech-badges">
+            <span class="tech-badge">React</span>
+            <span class="tech-badge">Performance</span>
+            <span class="tech-badge">Responsive UI</span>
+          </div>
+
+          <a href="https://drive.google.com/file/d/1MEKrCPO3qc3FD4-fy8qL7MB3APkm3hQS/view?usp=sharing"
+             target="_blank"
+             rel="noopener"
+             style="display:inline-block;margin-top:1rem;font-family:var(--font-mono);font-size:.78rem;color:var(--accent);">
+            <i class="fa-solid fa-certificate"></i> View Certificate
+          </a>
+
+        </div>
+      </div>
+
+      <!-- AI ML Internship -->
+      <div class="timeline-item" data-reveal="right">
+        <div class="timeline-dot"></div>
+
+        <div class="timeline-card">
+
+          <div class="timeline-meta">Jun 2025 – Jul 2025</div>
+
+          <h3>AI/ML Intern</h3>
+
+          <div class="timeline-org">
+            Shell–Edunet Skills4Future — AICTE Virtual Internship
+          </div>
+
+          <p>
+            Developed a machine learning model for water quality prediction using
+            Python and Scikit-learn, applying feature engineering, preprocessing,
+            and model evaluation techniques.
+          </p>
+
+          <div class="tech-badges">
+            <span class="tech-badge">Python</span>
+            <span class="tech-badge">Scikit-learn</span>
+            <span class="tech-badge">Machine Learning</span>
+          </div>
+
+          <a href="https://drive.google.com/file/d/1OMsBmVVP9gPNIpzlu2BBU7bvfSwhWAD9/view?usp=sharing"
+             target="_blank"
+             rel="noopener"
+             style="display:inline-block;margin-top:1rem;font-family:var(--font-mono);font-size:.78rem;color:var(--accent);">
+            <i class="fa-solid fa-certificate"></i> View Certificate
+          </a>
+
+        </div>
+      </div>
+
+      <!-- BTech -->
+      <div class="timeline-item" data-reveal="left">
+        <div class="timeline-dot"></div>
+
+        <div class="timeline-card">
+
+          <div class="timeline-meta">2022 – 2026</div>
+
+          <h3>B.Tech Computer Science &amp; Engineering</h3>
+
+          <div class="timeline-org">
+            Shri Ramswaroop Memorial College of Engineering &amp; Management, Lucknow
+          </div>
+
+          <p>
+            Graduated in <strong>2026</strong> with an
+            <strong>88% aggregate (8.8 CGPA)</strong>.
+            Built a strong foundation in Data Structures &amp; Algorithms,
+            Full-Stack Web Development, Artificial Intelligence,
+            Machine Learning, Database Management Systems and Software Engineering.Won Best project award in B.Tech and Best Dissertation Award at College Level.
+          </p>
+
+          <div class="tech-badges">
+            <span class="tech-badge">Python</span>
+            <span class="tech-badge">DSA</span>
+            <span class="tech-badge">MERN</span>
+            <span class="tech-badge">AI/ML</span>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Class XII -->
+      <div class="timeline-item" data-reveal="right">
+        <div class="timeline-dot"></div>
+
+        <div class="timeline-card">
+
+          <div class="timeline-meta">2020 – 2022</div>
+
+          <h3>ISC Class XII (PCM)</h3>
+
+          <div class="timeline-org">
+            St. Paul's College, Lucknow
+          </div>
+
+          <p>
+            Completed Higher Secondary Education with
+            <strong>91.75%</strong> in
+            Physics, Chemistry and Mathematics.
+          </p>
+
+          <div class="tech-badges">
+            <span class="tech-badge">Physics</span>
+            <span class="tech-badge">Chemistry</span>
+            <span class="tech-badge">Mathematics</span>
+            <span class="tech-badge">91.75%</span>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Class X -->
+      <div class="timeline-item" data-reveal="left">
+        <div class="timeline-dot"></div>
+
+        <div class="timeline-card">
+
+          <div class="timeline-meta">2019 – 2020</div>
+
+          <h3>ICSE Class X</h3>
+
+          <div class="timeline-org">
+            St. Paul's College, Lucknow
+          </div>
+
+          <p>
+            Completed Secondary Education with
+            <strong>92.20%</strong>, building a strong academic
+            foundation in Science and Mathematics.
+          </p>
+
+          <div class="tech-badges">
+            <span class="tech-badge">Science</span>
+            <span class="tech-badge">Mathematics</span>
+            <span class="tech-badge">ICSE</span>
+            <span class="tech-badge">92.20%</span>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+ 
+  <!-- Projects -->
+  <section id="projects">
+    <div class="section-inner">
+      <span class="eyebrow" data-reveal>Work</span>
+      <h2 class="section-title" data-reveal>Selected <span class="gradient-text">Projects</span></h2>
+      <p class="section-sub" data-reveal>A mix of AI tooling, full-stack apps and data-driven experiments.</p>
+
+      <div class="project-filters" data-reveal>
+        <button class="tab-btn active" data-cat="all">All</button>
+        <button class="tab-btn" data-cat="ai">AI / ML</button>
+        <button class="tab-btn" data-cat="web">Web</button>
+      </div>
+
+      <div class="projects-grid">
+        <div class="project-card" data-cat="web" data-reveal>
+          <div class="project-glyph">📚</div>
+          <h3>MyBookRoom — Full-Stack Bookstore</h3>
+          <p>A full-stack bookstore application with two independent portals — user and admin — with JWT
+            authentication and role-based access control.</p>
+          <ul class="project-features">
+            <li>10+ concurrent API endpoints, sub-200ms response times</li>
+            <li>Admin dashboard managing 50+ SKUs with real-time inventory &amp; order tracking</li>
+            <li>Cut manual catalog update time by 70%</li>
+          </ul>
+          <div class="tech-badges" style="margin-bottom:1.2rem;">
+            <span class="tech-badge">MongoDB</span><span class="tech-badge">Express.js</span><span class="tech-badge">React.js</span><span class="tech-badge">Node.js</span><span class="tech-badge">JWT</span>
+          </div>
+          <div class="project-actions">
+            <a href="https://github.com/siddharthcode-24/MyBookRoom" target="_blank" rel="noopener" class="gh"><i class="fa-brands fa-github"></i> Code</a>
+          </div>
+        </div>
+
+        <div class="project-card" data-cat="web" data-reveal data-delay="80">
+          <div class="project-glyph">💼</div>
+          <h3>Full-Stack Job Portal</h3>
+          <p>A dual-role job portal with advanced filtering and one-click applications for job seekers and
+            recruiters.</p>
+          <ul class="project-features">
+            <li>8+ advanced filters, one-click applications, role-based dashboards</li>
+            <li>Reduced job discovery time by 50%</li>
+            <li>Supabase real-time DB + Clerk OAuth, sub-second sync across 4 relational tables</li>
+          </ul>
+          <div class="tech-badges" style="margin-bottom:1.2rem;">
+            <span class="tech-badge">React.js</span><span class="tech-badge">Supabase</span><span class="tech-badge">Clerk Auth</span><span class="tech-badge">Tailwind CSS</span><span class="tech-badge">Shadcn UI</span>
+          </div>
+          <div class="project-actions">
+            <a href="https://github.com/siddharthcode-24/Full-stack-Job-Portal" target="_blank" rel="noopener" class="gh"><i class="fa-brands fa-github"></i> Code</a>
+          </div>
+        </div>
+        <div class="project-card" data-cat="ai" data-reveal data-delay="80">
+  <div class="project-glyph">🎬</div>
+  <h3>VidSnapAI – AI Reel Generator</h3>
+  <p>An AI-powered web application that transforms text prompts into engaging short-form reels with automated voiceovers, subtitles, and background media.</p>
+
+  <ul class="project-features">
+    <li>Generates AI-powered reels from user prompts with automated workflow</li>
+    <li>Integrates text-to-speech, subtitle generation, and FFmpeg video processing</li>
+    <li>Responsive dashboard with media gallery, authentication, and downloadable videos</li>
+  </ul>
+
+  <div class="tech-badges" style="margin-bottom:1.2rem;">
+    <span class="tech-badge">Python</span>
+    <span class="tech-badge">Flask</span>
+    <span class="tech-badge">HTML</span>
+    <span class="tech-badge">CSS</span>
+    <span class="tech-badge">JavaScript</span>
+    <span class="tech-badge">FFmpeg</span>
+    <span class="tech-badge">Eleven Labs API</span>
+  </div>
+
+  <div class="project-actions">
+    <a href="https://github.com/siddharthcode-24/VidSnapAI" target="_blank" rel="noopener" class="gh">
+      <i class="fa-brands fa-github"></i> Code
+    </a>
+  </div>
+</div>
+
+        <div class="project-card" data-cat="ai" data-reveal data-delay="160">
+          <div class="project-glyph">🩺</div>
+          <h3>Medical Report Summarizer</h3>
+          <p>A RAG pipeline that turns dense medical reports into fast, accurate, patient-friendly summaries.</p>
+          <ul class="project-features">
+            <li>LangChain + FAISS + HuggingFace RAG pipeline, 40% higher factual accuracy vs. baseline LLM</li>
+            <li>Under 5-second average inference time per report</li>
+            <li>Cut physician report-reading time by 60%; 100% uptime across 20+ live demos</li>
+          </ul>
+          <div class="tech-badges" style="margin-bottom:1.2rem;">
+            <span class="tech-badge">LangChain</span><span class="tech-badge">HuggingFace</span><span class="tech-badge">FAISS</span><span class="tech-badge">Streamlit</span>
+          </div>
+          <div class="project-actions">
+            <a href="https://github.com/siddharthcode-24/Medical-Report-Summarizer" target="_blank" rel="noopener" class="gh"><i class="fa-brands fa-github"></i> Code</a>
+          </div>
+        </div>
+
+        <div class="project-card" data-cat="ai" data-reveal data-delay="240">
+          <div class="project-glyph">🧠</div>
+          <h3>Cerebral Autonomy — Parkinson Detection</h3>
+          <p>An AI-driven voice analysis system for emotional monitoring and early Parkinson's disease
+            prediction using speech feature extraction.</p>
+          <ul class="project-features">
+            <li>Preprocessing &amp; predictive modeling pipelines for real-time voice-based analysis</li>
+            <li>Flask-based interactive interface for healthcare use</li>
+            <li>IEEE-standard technical documentation prepared for conference submission</li>
+          </ul>
+          <div class="tech-badges" style="margin-bottom:1.2rem;">
+            <span class="tech-badge">Python</span><span class="tech-badge">Machine Learning</span><span class="tech-badge">Flask</span><span class="tech-badge">Scikit-learn</span>
+          </div>
+          <div class="project-actions">
+            <a href="https://github.com/siddharthcode-24/Parkinson_College_Final-Year-Project" target="_blank" rel="noopener" class="gh"><i class="fa-brands fa-github"></i> Code</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certifications -->
+  <section id="certifications">
+    <div class="section-inner">
+      <span class="eyebrow" data-reveal>Credentials</span>
+      <h2 class="section-title" data-reveal>Certifications &amp; <span class="gradient-text">Achievements</span></h2>
+      <p class="section-sub" data-reveal>Click any card to view the certificate. Verified credentials from Microsoft, Oracle, Google, Cisco, IBM and Udemy.</p>
+
+      <div class="cert-grid">
+        <div class="cert-card" data-reveal data-full="assets/cert-microsoft-azure.png" data-title="AI Azure Internship — Microsoft x Edunet">
+          <div class="cert-thumb"><img src="assets/cert-microsoft-azure.png" alt="Microsoft AI Azure internship certificate" loading="lazy"></div>
+          <div class="cert-info"><span class="cert-tag mono">JUL 2025</span><h3>AI Azure Internship</h3><p>Microsoft × Edunet Foundation × AICTE</p></div>
+        </div>
+        <div class="cert-card" data-reveal data-delay="60" data-full="assets/cert-oracle-ai.png" data-title="Oracle Certified Foundations Associate">
+          <div class="cert-thumb"><img src="assets/cert-oracle-ai.png" alt="Oracle Certified Foundations Associate certificate" loading="lazy"></div>
+          <div class="cert-info"><span class="cert-tag mono">AUG 2025</span><h3>Oracle AI Foundations Associate</h3><p>Oracle University</p></div>
+        </div>
+        <div class="cert-card" data-reveal data-delay="120" data-full="assets/cert-cisco-cybersecurity.png" data-title="Introduction to Cybersecurity — Cisco">
+          <div class="cert-thumb"><img src="assets/cert-cisco-cybersecurity.png" alt="Cisco Introduction to Cybersecurity certificate" loading="lazy"></div>
+          <div class="cert-info"><span class="cert-tag mono">JUL 2025</span><h3>Introduction to Cybersecurity</h3><p>Cisco Networking Academy</p></div>
+        </div>
+        <div class="cert-card" data-reveal data-full="assets/cert-google-cloud.png" data-title="Develop GenAI Apps with Gemini and Streamlit">
+          <div class="cert-thumb"><img src="assets/cert-google-cloud.png" alt="Google Cloud GenAI skill badge" loading="lazy"></div>
+          <div class="cert-info"><span class="cert-tag mono">MAY 2024</span><h3>GenAI Apps with Gemini &amp; Streamlit</h3><p>Google Cloud Skill Badge</p></div>
+        </div>
+        <div class="cert-card" data-reveal data-delay="60" data-full="assets/cert-ibm-html-css.png" data-title="Introduction to HTML and CSS — IBM SkillsBuild">
+          <div class="cert-thumb"><img src="assets/cert-ibm-html-css.png" alt="IBM SkillsBuild HTML and CSS certificate" loading="lazy"></div>
+          <div class="cert-info"><span class="cert-tag mono">OCT 2023</span><h3>Introduction to HTML &amp; CSS</h3><p>IBM SkillsBuild</p></div>
+        </div>
+        <div class="cert-card" data-reveal data-delay="120" data-full="assets/cert-gfg.png" data-title="GeeksforGeeks Student Chapter Contribution">
+          <div class="cert-thumb"><img src="assets/cert-gfg.png" alt="GeeksforGeeks Student Chapter certificate" loading="lazy"></div>
+          <div class="cert-info"><span class="cert-tag mono">2025</span><h3>Social Media Head — Student Chapter</h3><p>GeeksforGeeks</p></div>
+        </div>
+        <div class="cert-card" data-reveal data-delay="60" data-full="assets/IBM.png" data-title="IBM Cybersecurity Training">
+  <div class="cert-thumb">
+    <img src="assets/IBM.png" alt="IBM Cybersecurity Training Certificate" loading="lazy">
+  </div>
+  <div class="cert-info">
+    <span class="cert-tag mono">OCT 2024</span>
+    <h3>IBM Cybersecurity Training</h3>
+    <p>IBM SkillsBuild</p>
+  </div>
+</div>
+
+<div class="cert-card" data-reveal data-delay="120" data-full="assets/SRDT.png" data-title="SRDT Placement Training">
+  <div class="cert-thumb">
+    <img src="assets/SRDT.png" alt="SRDT Placement Training Certificate" loading="lazy">
+  </div>
+  <div class="cert-info">
+    <span class="cert-tag mono">JUN 2025</span>
+    <h3>DSA &amp; Aptitude Training</h3>
+    <p>SRDT Placement Program</p>
+  </div>
+</div>
+
+  <div class="cert-card" data-reveal data-full="assets/udemy.png" data-title="Python, LLM &amp; AI Training">
+    <div class="cert-thumb">
+      <img src="assets/udemy.png" alt="Udemy Python & AI Course Certificate" loading="lazy">
+    </div>
+    <div class="cert-info">
+      <span class="cert-tag mono">2026</span>
+      <h3>Python, LLM &amp; AI</h3>
+      <p>Udemy</p>
+    </div>
+  </div>
+
+  <div class="cert-card" data-reveal data-delay="60" data-full="assets/research_paper.png" data-title="IEEE Conference Publication">
+    <div class="cert-thumb">
+      <img src="assets/research_paper.png" alt="IEEE Conference Research Paper" loading="lazy">
+    </div>
+    <div class="cert-info">
+      <span class="cert-tag mono">2026</span>
+      <h3>IEEE Conference Publication</h3>
+      <p>Research Paper</p>
+    </div>
+  </div>
+        <div class="cert-card" data-reveal data-delay="120" data-full="assets/LearnTrail.png" data-title="LearnTrail Bootcamp - RAG, LLM & AI">
+    <div class="cert-thumb">
+      <img src="assets/LearnTrail.png" alt="LearnTrail Bootcamp Certificate" loading="lazy">
+    </div>
+    <div class="cert-info">
+      <span class="cert-tag mono">2026</span>
+      <h3>RAG, LLM &amp; AI Bootcamp</h3>
+      <p>LearnTrail • 10-Day Intensive Program</p>
+    </div>
+  </div>
+
+  <div class="cert-card" data-reveal data-delay="120" data-full="assets/Naukri.com.png" data-title="National Employability Aptitude Test">
+    <div class="cert-thumb">
+      <img src="assets/Naukri.com.png" alt="Naukri National Skill Test Certificate" loading="lazy">
+    </div>
+    <div class="cert-info">
+      <span class="cert-tag mono">2026</span>
+      <h3>National Skill Test</h3>
+      <p>Naukri.com • Top 5% National Rank</p>
+    </div>
+  </div>
+
+  <div class="cert-card" data-reveal data-delay="120" data-full="assets/Hackerrank.png" data-title="HackerRank Python (Basic)">
+    <div class="cert-thumb">
+      <img src="assets/Hackerrank.png" alt="HackerRank Python Basic Certificate" loading="lazy">
+    </div>
+    <div class="cert-info">
+      <span class="cert-tag mono">2026</span>
+      <h3>Python (Basic)</h3>
+      <p>HackerRank Skill Certification</p>
+    </div>
+  </div>
+        </div>
+      </div>
+    </section>
+
+  <!-- Achievements -->
+  <section id="achievements">
+    <div class="section-inner">
+      <span class="eyebrow" data-reveal>By the numbers</span>
+      <h2 class="section-title" data-reveal>Milestones so <span class="gradient-text">far</span></h2>
+      <div class="achieve-grid">
+        <a class="achieve-card" data-reveal href="https://www.linkedin.com/posts/siddharth-bajaj-059957257_hackloop2025-hackathon-teamwork-ugcPost-7370761564271886337-R8H3" target="_blank" rel="noopener" style="text-decoration:none;display:block;">
+          <div class="achieve-icon">🏆</div>
+          <div class="achieve-num"><span data-count="100" data-suffix="">0</span><span class="plus">+</span></div>
+          <div class="achieve-label">Teams Beaten — Hackloop 2025 Winner</div>
+        </a>
+        <div class="achieve-card" data-reveal data-delay="80">
+          <div class="achieve-icon">🇮🇳</div>
+          <div class="achieve-num"><span data-count="2" data-suffix="">0</span><span class="plus">×</span></div>
+          <div class="achieve-label">Smart India Hackathon Finalist</div>
+        </div>
+        <a class="achieve-card" data-reveal data-delay="160" href="https://www.linkedin.com/posts/siddharth-bajaj-059957257_youngturks25-achievement-consistency-activity-7378718939872182272-x6GU" target="_blank" rel="noopener" style="text-decoration:none;display:block;">
+          <div class="achieve-icon">📊</div>
+          <div class="achieve-num"><span data-count="3" data-suffix="">0</span><span class="plus">%</span></div>
+          <div class="achieve-label">Top Nationally — Naukri Young Turks 2025 (Rank 14,481 / 500,000+)</div>
+        </a>
+        <a class="achieve-card" data-reveal data-delay="240" href="https://www.linkedin.com/posts/siddharth-bajaj-059957257_bestinnovativeprojectaward-bestproject-bestdissertationaward-ugcPost-7462496753410347009-R7tl" target="_blank" rel="noopener" style="text-decoration:none;display:block;">
+          <div class="achieve-icon">🎓</div>
+          <div class="achieve-num" style="font-size:2.6rem;">8.8 <span class="plus">CGPA</span></div>
+          <div class="achieve-label">Best B.Tech Project Award &amp; Best Dissertation (Gold &amp; Silver Medal)</div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <div class="section-inner">
+      <span class="eyebrow" data-reveal>Get in touch</span>
+      <h2 class="section-title" data-reveal>Let's build something <span class="gradient-text">great</span></h2>
+      <p class="section-sub" data-reveal>Have a project idea, an opportunity, or just want to say hi? Drop a message below.</p>
+
+      <div class="contact-wrap">
+        <div class="contact-info-card" data-reveal="left">
+          <h3>Contact Details</h3>
+          <div class="contact-row">
+            <div class="icon-btn"><i class="fa-solid fa-envelope"></i></div>
+            <div class="contact-row-text"><span>Email</span><strong>siddharthbajaj24@gmail.com</strong></div>
+          </div>
+          <div class="contact-row">
+            <div class="icon-btn"><i class="fa-brands fa-linkedin-in"></i></div>
+            <div class="contact-row-text"><span>LinkedIn</span><strong>siddharth-bajaj</strong></div>
+          </div>
+          <div class="contact-row">
+            <div class="icon-btn"><i class="fa-brands fa-github"></i></div>
+            <div class="contact-row-text"><span>GitHub</span><strong>siddharthcode-24</strong></div>
+          </div>
+          <div class="contact-row">
+            <div class="icon-btn"><i class="fa-solid fa-phone"></i></div>
+            <div class="contact-row-text"><span>Phone</span><strong>+91-9026475852</strong></div>
+          </div>
+          <div class="contact-row">
+            <div class="icon-btn"><i class="fa-solid fa-location-dot"></i></div>
+            <div class="contact-row-text"><span>Location</span><strong>Lucknow, Uttar Pradesh, India</strong></div>
+          </div>
+        </div>
+
+        <form class="contact-form" id="contact-form" action="https://formspree.io/f/mldnqjlg" method="POST" data-reveal="right">
+          <div class="input-group">
+            <input type="text" id="name" name="name" placeholder=" " required>
+            <label for="name">Your Name</label>
+          </div>
+          <div class="input-group">
+            <input type="email" id="email" name="email" placeholder=" " required>
+            <label for="email">Your Email</label>
+          </div>
+          <div class="input-group">
+            <textarea id="message" name="message" rows="5" placeholder=" " required></textarea>
+            <label for="message">Your Message</label>
+          </div>
+          <button type="submit" id="send-btn" class="btn btn-primary">Send Message <i class="fa-solid fa-paper-plane"></i></button>
+          <div class="form-status" id="form-status"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-content">
+    <div class="logo">&lt;Siddharth Bajaj/&gt;</div>
+    <p class="copyright-text">© 2025 Siddharth Bajaj. All Rights Reserved.</p>
+    <div class="footer-links">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<!-- Certificate lightbox -->
+<div id="lightbox">
+  <button id="lightbox-close" aria-label="Close">✕</button>
+  <img id="lightbox-img" src="" alt="Certificate preview">
+</div>
+
+<!-- Back to top -->
+<button id="back-to-top" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+<!-- Terminal easter egg -->
+<div id="terminal-fab" title="Open terminal"><i class="fa-solid fa-terminal"></i></div>
+<div id="terminal-container">
+  <div id="terminal-header">
+    <span class="term-dot red"></span><span class="term-dot yellow"></span><span class="term-dot green"></span>
+    <span class="term-title">siddharth@portfolio: ~</span>
+  </div>
+  <div id="terminal-body">
+    <div id="terminal-output">
+      <p class="terminal-output-text">Welcome! Type <span class="command-highlight">help</span> to see available commands.</p>
+    </div>
+    <div id="terminal-input-row">
+      <span class="prompt">$</span>
+      <input type="text" id="terminal-input" autocomplete="off" spellcheck="false" placeholder="type a command…">
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<script src="script.js"></script>
+</body>
+</html>
