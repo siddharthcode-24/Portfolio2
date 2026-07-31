@@ -304,21 +304,4 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // Draggable terminal
-  let isDragging = false, offsetX = 0, offsetY = 0;
-  terminalHeader.addEventListener('mousedown', (e) => {
-    isDragging = true;
-    const rect = terminalContainer.getBoundingClientRect();
-    offsetX = e.clientX - rect.left;
-    offsetY = e.clientY - rect.top;
-    terminalContainer.style.right = 'auto';
-    terminalContainer.style.bottom = 'auto';
-  });
-  document.addEventListener('mousemove', (e) => {
-    if (!isDragging) return;
-    terminalContainer.style.left = (e.clientX - offsetX) + 'px';
-    terminalContainer.style.top = (e.clientY - offsetY) + 'px';
-  });
-  document.addEventListener('mouseup', () => { isDragging = false; });
-
 });
