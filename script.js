@@ -303,10 +303,4 @@ document.addEventListener('DOMContentLoaded', () => {
       printLine(`Command not found: <span class="command-highlight">${raw}</span>. Type <span class="command-highlight">help</span>.`);
     }
   });
-
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 50562263b18c117b4ab2a67fa86a20152dbdeec5
 });
